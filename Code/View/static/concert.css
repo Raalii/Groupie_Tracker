@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  border: none;
+  outline: none;
+}
+
+p,
+h1,
+h2 {
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+}
+
+.Intro {
+  background: center
+    url(https://images6.alphacoders.com/478/thumb-1920-478918.jpg);
+  width: 100vw;
+  height: 100vh;
+}
+
+#bg {
+  background: rgba(0, 0, 0, 0.376);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#bg p {
+  color: wheat;
+}
+
+#bg .title {
+  font-size: 4em;
+  font-weight: bold;
+}
+
+#bg .subtitle {
+  margin-top: 1vh;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #adadad;
+}
+
+.ConcertList {
+  width: 100vw;
+  height: 95vh;
+  background: url(https://i.pinimg.com/originals/b8/4f/41/b84f4195a6d33c93d01111287c0c7b7e.jpg);
+  margin-top: 5vh;
+}
+
+.SearchBar {
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.ConcertContent {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  /* align-items: baseline; */
+  justify-content: space-around;
+}
+
+.ConcertDetail {
+  border-radius: 10px;
+  /* border: solid rgb(233, 233, 233) 0.1mm; */
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 80vh;
+  width: 45vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Tab {
+  margin-top: 10vh;
+}
+
+p {
+  text-align: center;
+}
+
+table {
+  width: 45vw;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+th,
+td {
+  padding: 15px;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+  "Arial", sans-serif;
+  /* font-weight: bold; */
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgb(255, 255, 255);
+}
+th {
+  text-align: left;
+}
+
+tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+tbody td {
+  position: relative;
+}
+tbody td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* top: -9999px;
+  bottom: -9999px; */
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+#map {
+  width: 50vw;
+  height: 80vh;
+}
+
+@media (max-width: 1100px) {
+  .ConcertContent {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0b1b35;
+  }
+
+  /* .ConcertContent, .ConcertDetail .Tab, table {
+      width: 90vw;
+    } */
+
+  #map {
+    width: 95vw;
+  }
+}
+
+.gm-style .gm-style-iw-d {
+  text-transform: capitalize;
+  font-weight: bold;
+}

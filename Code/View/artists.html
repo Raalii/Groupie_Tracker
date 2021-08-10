@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./static/card.css" />
+    <link rel="stylesheet" href="./static/artists.css" />
+    <link rel="shortcut icon" type="image/ico" href="./favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="./static/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="./static/searchBar.css" />
+    <link rel="stylesheet" href="./static/scroll.css" />
+    <link rel="stylesheet" href="./static/link.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Artists</title>
+  </head>
+  <link
+    href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+    rel="stylesheet"
+  />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <body>
+    <datalist id="ArtistData">
+      {{range .}}
+      <option value="{{.Name}}">{{.Name}}</option>
+      {{range .Members}}
+      <option value="{{.}}">{{.}}</option>
+      {{end}} {{end}}
+    </datalist>
+    <script>
+      AOS.init();
+    </script>
+    <div class="FilterForm">
+      <form action="/artists">
+        <div class="FilterContent">
+          <div class="ToggleContainer">
+            <div class="switch">
+              <input
+                checked="true"
+                type="checkbox"
+                value="true"
+                name="Artistes"
+              />
+              <label for="Artistes">
+                <i class="bulb">
+                  <span class="bulb-center"></span>
+                  <span class="filament-1"></span>
+                  <span class="filament-2"></span>
+                  <span class="reflections">
+                    <span></span>
+                  </span>
+                  <span class="sparks">
+                    <i class="spark1"></i>
+                    <i class="spark2"></i>
+                    <i class="spark3"></i>
+                    <i class="spark4"></i>
+                  </span>
+                </i>
+              </label>
+            </div>
+            <p class="params">Artistes</p>
+          </div>
+          <div class="ToggleContainer">
+            <div class="switch">
+              <input
+                checked="true"
+                value="true"
+                type="checkbox"
+                name="Groupes"
+              />
+              <label for="Groupes">
+                <i class="bulb">
+                  <span class="bulb-center"></span>
+                  <span class="filament-1"></span>
+                  <span class="filament-2"></span>
+                  <span class="reflections">
+                    <span></span>
+                  </span>
+                  <span class="sparks">
+                    <i class="spark1"></i>
+                    <i class="spark2"></i>
+                    <i class="spark3"></i>
+                    <i class="spark4"></i>
+                  </span>
+                </i>
+              </label>
+            </div>
+            <p class="params">Groupe</p>
+          </div>
+          <select name="country" id="country-select">
+            <option value="all">Choisir par pays</option>
+            <option value="Britannique">Angleterre</option>
+            <option value="Américain">USA</option>
+            <option value="Allemand">Allemagne</option>
+            <option value="Australien">Australie</option>
+            <option value="Brésilien">Brésil</option>
+            <option value="Néerlandais">Pays-Bas</option>
+            <option value="Canadien">Canada</option>
+            <option value="Irlandais">Irlande</option>
+          </select>
+
+          <div class="filterContainer">
+            <div class="FilterByAlbumDate">
+              <label for="" class="titleFilter"
+                >Filtrer par date de création du premier album</label
+              >
+              <input type="date" class="StartDate" name="StartDateAlbum" />
+              <label for=""> à </label
+              ><input type="date" class="StartDate" name="StartEndAlbum" />
+            </div>
+            <div class="FilterByArtistDate" style="margin-top: 3vh">
+              <label for="" class="titleFilter"
+                >Filtrer par date de création du groupe/artiste</label
+              >
+              <input type="date" class="StartDate" name="StartDateArtist" />
+              <label for=""> à </label
+              ><input type="date" class="StartDate" name="StartEndArtist" />
+            </div>
+          </div>
+          <button id="submit" type="submit">Appliquer Changement</button>
+        </div>
+      </form>
+    </div>
+    <div id="ToggleFilter">
+      <button
+        class="rainbow-button"
+        onclick="DisplayFilter()"
+        alt="Filtrer"
+      ></button>
+    </div>
+
+    <script>
+      let Display = false;
+      const ButtonFilter = document.querySelector(".rainbow-button");
+      const Div = document.querySelector(".FilterForm");
+
+      function DisplayFilter() {
+        if (!Display) {
+          Div.style.display = "flex";
+          ButtonFilter.style.color = "#00c0ff";
+          Display = true;
+        } else {
+          Div.style.display = "none";
+          ButtonFilter.style.color = "white";
+          Display = false;
+        }
+      }
+    </script>
+
+    <div id="bg-filter"></div>
+    <div id="bg"></div>
+    <div id="container">
+      <div id="navbar" style="background-color: black">
+        <div id="navbarcontent">
+          <nav>
+            <a href="/">HOME</a>
+            <a href="/artists">ARTISTES</a>
+            <a href="/concert">CONCERT</a>
+            <a href="/billeterie">BILLETERIE</a>
+            <div id="indicator"></div>
+          </nav>
+        </div>
+      </div>
+      <div class="SearchContainer">
+        <div class="SearchBar">
+          <form action="/artists" class="search-bar">
+            <input
+              autocomplete="on"
+              type="search"
+              name="search"
+              placeholder="Search..."
+              list="ArtistData"
+            />
+            <button class="search-btn" type="submit">
+              <span>Search</span>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="TitleContent">
+        <p class="title" data-aos="zoom-in-down" data-aos-duration="1500">
+          Retrouvez tout vos Artistes ici !
+        </p>
+        <p class="subtitle" data-aos="zoom-in-up" data-aos-duration="1500">
+          Une liste de plus de 50 artistes et groupes !
+        </p>
+      </div>
+      <div id="Main-content">
+        <main class="page-content">
+          {{range .}}
+          <div class="card" style="margin-bottom: 1cm; box-sizing: border-box">
+            <div class="content">
+              <img
+                class="title"
+                src="{{.Image}}"
+                width="auto"
+                height="100px"
+                alt=""
+              />
+              <h2 class="title" style="margin-top: 20px">{{.Name}}</h2>
+              <p class="copy">{{.Type}}</p>
+              <form class="form-inline" action="/artists/details" method="POST">
+                <input type="hidden" name="CurrentArtist" value="{{.ID}}" />
+                <button class="btn">Voir plus</button>
+              </form>
+            </div>
+          </div>
+          {{end}}
+        </main>
+      </div>
+    </div>
+    <script>
+      const search = document.querySelector('input[type="text"]');
+      const borderValue = document.querySelector(".search-container");
+      search.addEventListener("focus", (event) => {
+        borderValue.style.borderColor = "rgb(210, 210, 210)";
+      });
+
+      search.addEventListener(
+        "blur",
+        (event) => {
+          borderValue.style.borderColor = "rgb(93, 93, 93)";
+        },
+        true
+      );
+    </script>
+  </body>
+</html>

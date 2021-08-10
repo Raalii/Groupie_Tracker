@@ -1,0 +1,13 @@
+Sources du projet 
+
+    Frontend : 
+        MDN (pour les balises, et quelques informations sur le javascript) : https://developer.mozilla.org/fr/
+        Free Frontend (pour quelques composants de notre projet) : https://freefrontend.com/
+
+
+    Backend :
+        Cours sur les templates : https://curtisvermeeren.github.io/2017/09/14/Golang-Templates-Cheatsheet
+        Cours pour utiliser une api en golang : https://tutorialedge.net/golang/consuming-restful-api-with-go/
+        Un repo git qui nous a aidé : https://github.com/Medina7276/groupie-tracker_Golang
+
+

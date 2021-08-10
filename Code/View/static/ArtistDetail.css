@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+}
+
+p,
+h1,
+h2,
+td,
+th {
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+}
+
+#bg {
+  width: 100vw;
+  height: 100vh;
+  background: no-repeat
+    url(https://www.wallpapertip.com/wmimgs/75-755790_wallpaper-music-data-src-most-popular-music-instruments.jpg);
+  z-index: -1;
+  position: absolute;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ArtistContent {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.ArtistContent p,
+label {
+  color: white;
+}
+
+.ArtistContent .title {
+  font-weight: bold;
+  font-size: 4em;
+  margin-top: 7vh;
+}
+
+.ArtistContent .subtitle {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-top: 5vh;
+  color: #dc7633;
+}
+
+.DescriptionContent {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.DescriptionContent div {
+  margin-top: 1vh;
+  display: flex;
+  align-items: baseline;
+}
+
+.DescripitionTitle {
+  margin-right: 1vw;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.TextDescription {
+  margin-left: 1vw;
+  font-size: 1.3em;
+}
+
+.ArtistContent img {
+  margin-top: 26vh;
+  border-radius: 20px;
+}
+
+.ArtistPreView {
+  height: 100vh;
+  margin-left: 6vw;
+}
+
+.ConcertContent {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.ConcertDetail {
+  border-radius: 10px;
+  /* border: solid rgb(233, 233, 233) 0.1mm; */
+  overflow-y: scroll;
+  height: 95vh;
+  width: 45vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Tab {
+  margin-top: 10vh;
+}
+
+table {
+  width: 800px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgb(255, 255, 255);
+}
+th {
+  text-align: left;
+}
+
+tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+tbody td {
+  position: relative;
+}
+tbody td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* top: -9999px;
+bottom: -9999px; */
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+
+.button {
+    background:  #dc7633 ;
+    padding: 2rem;
+    outline: none;
+    border: none;
+    border-radius: 4rem;
+    cursor: pointer;
+    transition: 0.25s;
+    margin: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.button:active {
+    background: #005db7;
+    transition: 0;
+}
+.arrow {
+    position: relative;
+    background: rgb(0, 0, 0);
+    width: 4rem;
+    height: 0.4rem;
+    transition: 0.5s;
+    border-radius: 1rem;
+    transform-origin: right center;
+}
+.arrow:before {
+    transform: rotate(-35deg);
+}
+.arrow:after {
+    transform: rotate(35deg);
+}
+.arrow:before, .arrow:after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    background: rgb(0, 0, 0);
+    width: 2rem;
+    height: 0.4rem;
+    transform-origin: 0.2rem center;
+    transition: 0.5s;
+    border-radius: 1rem;
+}
+.switch.right .arrow:before, .switch.right .arrow:after {
+    left: 3.8rem;
+}
+.switch.right .arrow:before {
+    transform: rotate(140deg);
+}
+.switch.right .arrow:after {
+    transform: rotate(-140deg);
+}
+.flip {
+    transform: translateZ(1rem) perspective(600);
+}
+.flip.right {
+    transform: translateZ(1rem) perspective(600) rotateY(180deg);
+}
+

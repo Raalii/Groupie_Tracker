@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+}
+
+p,
+h1,
+h2 {
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+}
+
+#bg {
+  width: 100vw;
+  height: 90vh;
+  position: absolute;
+  top: 10vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#bg p {
+  color: white;
+}
+
+#bg .title {
+  font-weight: 600;
+  font-size: 4em;
+}
+
+#bg .subtitle {
+  font-weight: 400;
+  font-size: 2em;
+}
+
+#bg .subSubtitle {
+  font-weight: 600;
+  font-size: 1em;
+  color: rgb(158, 158, 158);
+  margin-top: 2vh;
+}
+
+#bg-img {
+  width: 100vw;
+  height: 90vh;
+  z-index: -1;
+  position: relative;
+  top: 10vh;
+  background: url("https://cdn.futura-sciences.com/buildsv6/images/wide1920/d/5/c/d5c02c9c93_50165980_concert.jpg");
+}
+
+.WelcomeContent {
+  margin-top: 10vh;
+}
+
+.linkContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 20vw;
+  position: relative;
+  top: 5vh;
+}
+
+.link {
+  color: #3498db;
+  /* font-weight: bold; */
+}
+
+#ArtistMoment {
+  background: #d7bde2;
+  margin-top: 15vh;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+}
+
+#bg-AM {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: no-repeat url("./img/kendrick.png");
+  background-position: center bottom 0px;
+  background-size: auto 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+#bg-AM p {
+  color: black;
+}
+
+#bg-AM .title {
+  font-size: 4em;
+  font-weight: 600;
+}
+
+#bg-AM .subtitle {
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+#bg-AM .subSubtitle {
+  font-size: 1em;
+  margin-top: 2vh;
+  font-weight: bold;
+  color: #9b59b6;
+}
+
+.AMContent {
+  margin-top: 10vh;
+}
+
+.linkContainer2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40vw;
+  position: relative;
+  top: 5vh;
+}
+
+#DiscoverPage {
+  width: 100vw;
+  height: 100vh;
+  /* background-color: #3498db; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftPage {
+  background-color: black;
+  width: 48vw;
+  height: 80vh;
+  margin-top: 10vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.leftPage p {
+  color: #f5f5f7;
+}
+
+.leftPage .title {
+  font-weight: 600;
+  font-size: 2em;
+}
+
+.leftPage .subtitle {
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-top: 1.6vh;
+}
+
+.leftPage .subSubtitle {
+  font-weight: normal;
+  font-size: 1em;
+  margin-top: 1vh;
+  color: #a7a7a7;
+  text-align: center;
+}
+
+.AMContent {
+  margin-top: 6vh;
+  display: flex;
+  align-items: center;
+}
+
+.AMContent img {
+  height: 4vh;
+  width: auto;
+}
+
+.rightPage {
+  background-color: black;
+  width: 48vw;
+  margin-right: 2vh;
+  height: 80vh;
+  margin-top: 10vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.spotifyImage img {
+  height: auto;
+  margin-top: 5vh;
+  width: 45vw;
+}
+
+.leftPage .link {
+  margin-top: 5vh;
+}
+
+.rightPage p {
+  color: white;
+  text-align: center;
+}
+
+
+.linkContainer3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30vw;
+  margin-top: 5vh;
+}
+
+
+.rightPage .AMContent p {
+  margin-left: 0.5vw;
+}
+
+.rightPage .title {
+  font-weight: 600;
+  font-size: 2em;
+}
+
+.rightPage .subtitle {
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-top: 1.6vh;
+  color: #ca2e28;
+}
+
+.rightPage .subSubtitle {
+  font-size: 1em;
+  margin-top: 1.5vh;
+  color: #a7a7a7;
+}
+
+.BilletImg img {
+  height: 60vh;
+  width: auto;
+}
+
+
+@media (max-width: 1650px) {
+  .linkContainer3 {
+    width: 40vw;
+  }
+
+
+  .linkContainer {
+    width: 40vw;
+  }
+} 

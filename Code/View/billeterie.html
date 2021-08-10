@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./static/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="./static/billet.css" />
+    <link rel="stylesheet" type="text/css" href="./static/button.css" />
+    <link rel="stylesheet" type="text/css" href="./static/link.css" />
+    <link rel="stylesheet" href="./static/scroll.css">
+    <link rel="shortcut icon" type="image/ico" href="./favicon.ico"/>
+    <title>Billeterie</title>
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+
+  <body>
+    <script>
+      AOS.init();
+    </script>
+    <div id="navbar" style="background: black">
+      <div id="navbarcontent">
+        <nav>
+          <a href="/">HOME</a>
+          <a href="/artists">ARTISTES</a>
+          <a href="/concert">CONCERT</a>
+          <a href="/billeterie">BILLETERIE</a>
+          <div id="indicator"></div>
+        </nav>
+      </div>
+    </div>
+    <div id="background"></div>
+    <div id="filter-bg">
+      <div class="IntroTitle">
+        <p class="title">Plongez vous dans l'univers de vos artistes</p>
+      </div>
+      <p class="subtitle">Des concerts en exclusivité chez Groupie Tracker</p>
+      <div class="linkContainer">
+        <a href="/concert" class="link" data-aos-duration="1500" data-aos="fade-right">
+          <span class="mask">
+            <div class="link-container">
+              <span class="link-title1 titleLink">VOIR PLUS</span>
+              <span class="link-title2 titleLink">CONCERTS</span>
+            </div>
+          </span>
+          <div class="link-icon">
+            <svg
+              class="icon"
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="white"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            >
+              <path
+                d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+              />
+            </svg>
+            <svg
+              class="icon"
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="white"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            >
+              <path
+                d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+              />
+            </svg>
+          </div>
+        </a>
+        <a href="https://www.ticketmaster.fr/fr/concert" class="link" data-aos-duration="1500" data-aos="fade-left">
+          <span class="mask">
+            <div class="link-container">
+              <span class="link-title1 titleLink">VOIR PLUS</span>
+              <span class="link-title2 titleLink">BILLETERIE</span>
+            </div>
+          </span>
+          <div class="link-icon">
+            <svg
+              class="icon"
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="white"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            >
+              <path
+                d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+              />
+            </svg>
+            <svg
+              class="icon"
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="white"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              
+            >
+              <path
+                d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+              />
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="PayTicketContainer"></div>
+    <div id="bg-filter-2">
+      <div class="IntroTitle" style="margin-top: 15vh">
+        <p class="title">Promo du moment !</p>
+      </div>
+      <p class="subtitle" style="color: #e6a46d">
+        Le concert Groupie jusqu'à -50% avec le code promo <em>rayane12baizbiz</em>
+      </p>
+      <img src="./static/img/Ticket.png" alt="" />
+      <div class="parent">
+        <input type="checkbox" name="button" id="button" />
+        <label class="bevel" onclick="Inner()" for="button"
+          >Réserver une place</label
+        >
+        <span> <em> Obtenir le ticket en exclusivité </em> </span>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    let Pressed = false;
+
+    const Inner = () => {
+      if (!Pressed) {
+        document.querySelector(".bevel").textContent = "Réservé";
+        Pressed = true;
+      } else {
+        document.querySelector(".bevel").textContent = "Réserver une place";
+        Pressed = false;
+      }
+    };
+  </script>
+</html>

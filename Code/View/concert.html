@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./static/concert.css" />
+    <link rel="stylesheet" href="./static/navbar.css" />
+    <link rel="stylesheet" href="./static/searchBar.css" />
+    <link rel="stylesheet" href="./static/scroll.css" />
+    <script src="./static/js/main.js"></script> 
+    <script></script>
+    <link rel="shortcut icon" type="image/ico" href="./favicon.ico" />
+    <title>Concert</title>
+  </head>
+  <body>
+    <datalist id="ArtistData">
+      {{range .}} 
+      {{range $key, $value := .DatesLocations}}
+      <option value="{{$key}}">{{$key}}</option>
+      {{end}}
+      <option value="{{.Name}}">{{.Name}}</option>
+      {{range .Members}}
+      <option value="{{.}}">{{.}}</option>
+      {{end}} 
+      {{end}}
+    </datalist>
+    <div>
+      <div id="navbar" style="background: black">
+        <div id="navbarcontent">
+          <nav>
+            <a href="/">HOME</a>
+            <a href="/artists">ARTISTES</a>
+            <a href="/concert">CONCERT</a>
+            <a href="/billeterie">BILLETERIE</a>
+            <div id="indicator"></div>
+          </nav>
+        </div>
+      </div>
+      <div class="Intro">
+        <div id="bg">
+          <div class="TitleContainer">
+            <p class="title">Retrouvez tout vos concert ici !</p>
+          </div>
+          <p class="subtitle">
+            Une liste de plus de 1000 concert rien que pour vous.
+          </p>
+        </div>
+      </div>
+      <div class="ConcertList">
+        <div class="SearchBar">
+          <form action="/concert" class="search-bar">
+            <input
+              autocomplete="off"
+              type="search"
+              name="search"
+              placeholder="Entrez le lieu du concert ou le nom d'un artiste/groupe"
+              list="ArtistData"
+            />
+
+            <button class="search-btn" type="submit">
+              <span>Search</span>
+            </button>
+          </form>
+        </div>
+        <div class="ConcertContent">
+          <div class="ConcertDetail">
+            <div class="Tab">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Lieu</th>
+                    <th>Artiste</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {{range $d, $Artist := .}} 
+                  {{range $key, $value :=.DatesLocations}} 
+                  {{range $value}}
+                  <tr>
+                    <td style="text-transform: capitalize">{{$key}}</td>
+                    <td>{{.}}</td>
+                    <td>{{$Artist.Name}}</td>
+                  </tr>
+                  {{end}} 
+                  {{end}}
+                   {{end}}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="MapView">
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Permet d'afficher les villes -->
+    <div id="MapData" style="display: none">
+      {{range .}}
+        {{range $key, $value := .DatesLocations}}
+            <p class="ville">{{$key}}</p>
+      {{end}}
+      {{end}}
+    </div>
+    <!-- Appel de l'API google map -->
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCXZamvw0qG9aG6KYe_M-Haqpwfc-8mHw&callback=initMap"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>

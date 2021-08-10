@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+}
+
+p,
+h1,
+h2,
+span,
+input,
+label {
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+}
+
+
+p {
+  text-align: center;
+}
+
+#background {
+  background: center
+    url(https://i.pinimg.com/originals/9e/c1/a6/9ec1a6f8cde2c0a90a9a31f17a770d0f.jpg);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+#filter-bg {
+  background: rgba(0, 0, 0, 0.253);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+p {
+  color: rgb(255, 255, 255);
+}
+
+.IntroTitle {
+  margin-top: 20vh;
+}
+
+.IntroTitle .title {
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 5vh;
+  color: #8cd0ff;
+}
+
+.linkContainer {
+  margin-top: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.linkContainer span {
+  color: aliceblue;
+  font-size: 1.15em;
+}
+
+.PayTicketContainer {
+  margin-top: 7vh;
+  width: 100vw;
+  height: 100vh;
+  background: url(https://data.1freewallpapers.com/download/orange-red-color-wave-4k-abstract.jpg);
+  background-size: cover;
+}
+
+#bg-filter-2 {
+  background: rgba(0, 0, 0, 0.253);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 107vh;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#bg-filter-2 img {
+  width: 50vw;
+  height: auto;
+  margin-top: 5vh;
+  transition: all 0.3s ease-out;
+}
+
+#bg-filter-2 img:hover {
+  transform: scale(1.15, 1.15);
+  /* cursor: pointer; */
+}
+
+
+svg {
+    stroke-width: 5cm;
+}

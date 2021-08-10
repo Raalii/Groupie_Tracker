@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./static/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="./static/home.css" />
+    <link rel="stylesheet" type="text/css" href="./static/link.css" />
+    <link rel="stylesheet" href="./static/scroll.css">
+    <link rel="shortcut icon" type="image/ico" href="./favicon.ico"/>
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Groupie Tracker</title>
+  </head>
+  <body>
+    <script>
+      AOS.init();
+    </script>
+    <div id="navbar">
+      <div id="navbarcontent">
+        <nav>
+          <a href="/">HOME</a>
+          <a href="/artists">ARTISTES</a>
+          <a href="/concert">CONCERT</a>
+          <a href="/billeterie">BILLETERIE</a>
+          <div id="indicator"></div>
+        </nav>
+      </div>
+    </div>
+    <div id="bg">
+      <div class="WelcomeContent">
+        <p class="title" data-aos-duration="1500" data-aos="fade-down">
+          Groupie Tracker
+        </p>
+      </div>
+      <p class="subtitle" data-aos-duration="1500" data-aos="fade-up">
+        La meilleure plateforme pour retrouver vos artistes
+      </p>
+      <p class="subSubtitle" data-aos-duration="1500" data-aos="zoom-in">
+        Disponible dès maintenant
+      </p>
+      <div class="linkContainer">
+        <a href="/artists" class="link" data-aos-duration="1500" data-aos="fade-right">
+          <span class="mask">
+            <div class="link-container">
+              <span class="link-title1 titleLink">VOIR PLUS</span>
+              <span class="link-title2 titleLink">ARTISTES</span>
+            </div>
+          </span>
+          <div class="link-icon">
+            <svg
+              class="icon"
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#3498db"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            >
+              <path
+                d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+              />
+            </svg>
+            <svg
+              class="icon"
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#3498db"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            >
+              <path
+                d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+              />
+            </svg>
+          </div>
+        </a>
+        <a href="/concert" class="link" data-aos-duration="1500" data-aos="fade-left">
+          <span class="mask">
+            <div class="link-container">
+              <span class="link-title1 titleLink">VOIR PLUS</span>
+              <span class="link-title2 titleLink">CONCERTS</span>
+            </div>
+          </span>
+          <div class="link-icon">
+            <svg
+              class="icon"
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#3498db"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            >
+              <path
+                d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+              />
+            </svg>
+            <svg
+              class="icon"
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#3498db"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            >
+              <path
+                d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+              />
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div id="bg-img"></div>
+
+    <div id="ArtistMoment">
+      <div id="bg-AM">
+        <div class="AMContent" data-aos-duration="1500" data-aos="fade-down">
+          <p class="title">Dernière sortie</p>
+        </div>
+        <p class="subtitle" data-aos-duration="1500" data-aos="fade-up">
+          Kendrick Lamar - Lay Wit Ya (feat. Duke Deuce)
+        </p>
+        <p class="subSubtitle" data-aos-duration="3000" data-aos="zoom-in">
+          Disponible partout
+        </p>
+        <div class="linkContainer2">
+          <a
+            href="/artists"
+            class="link"
+            data-aos-duration="1500"
+            data-aos="fade-right"
+          >
+            <span class="mask">
+              <div class="link-container">
+                <span class="link-title1 titleLink">EN SAVOIR PLUS</span>
+                <span class="link-title2 titleLink">EN SAVOIR PLUS</span>
+              </div>
+            </span>
+            <div class="link-icon">
+              <svg
+                class="icon"
+                width="24"
+                height="24"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#3498db"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              >
+                <path
+                  d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+                />
+              </svg>
+              <svg
+                class="icon"
+                width="24"
+                height="24"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#3498db"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              >
+                <path
+                  d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+                />
+              </svg>
+            </div>
+          </a>
+          <a
+            href="https://open.spotify.com/track/0RlsFYqkOzlg4ZxVQs9YJA?si=Yj4hcSQzSKiCUUa5s2qoJQ"
+            class="link"
+            data-aos-duration="1500"
+            data-aos="fade-left"
+          >
+            <span class="mask">
+              <div class="link-container">
+                <span class="link-title1 titleLink">ÉCOUTER</span>
+                <span class="link-title2 titleLink" style="color: #008000"
+                  >SPOTIFY</span
+                >
+              </div>
+            </span>
+            <div class="link-icon">
+              <svg
+                class="icon"
+                width="24"
+                height="24"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#3498db"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              >
+                <path
+                  d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+                />
+              </svg>
+              <svg
+                class="icon"
+                width="24"
+                height="24"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#008000"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              >
+                <path
+                  d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+                />
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="DiscoverPage">
+      <div class="leftPage">
+        <div class="AMContent">
+          <img
+            src="https://logos-marques.com/wp-content/uploads/2021/03/Spotify-Symbole.png"
+            alt=""
+          />
+          <p class="title" data-aos-duration="3000" data-aos="zoom-in">
+            Aussi sur Spotify ?
+          </p>
+        </div>
+        <p class="subtitle" data-aos-duration="3000" data-aos="zoom-in-up">
+          Playlist de l'année
+        </p>
+        <p class="subSubtitle" data-aos-duration="3000" data-aos="zoom-in-down">
+          Retrouvez notre Playlist avec nos meilleurs artistes de l'année comme
+          Yasmine, Rayane ou Lounes !
+        </p>
+        <div class="spotifyImage" data-aos-duration="1500" data-aos="fade-up">
+          <img
+            src="https://media.discordapp.net/attachments/755060264952528996/842847727750086666/Capture_decran_2021-05-14_a_21.35.49.png?width=732&height=286"
+            alt=""
+          />
+        </div>
+        <a href="https://open.spotify.com/playlist/0CXFOdfAmGBzw6sSllLjEX?si=JhQPZUJgS36ua1o_CbH6eQ" class="link" data-aos-duration="1500" data-aos="fade-left">
+          <span class="mask">
+            <div class="link-container">
+              <span class="link-title1 titleLink">ÉCOUTER</span>
+              <span class="link-title2 titleLink" style="color: #008000"
+                >SPOTIFY</span
+              >
+            </div>
+          </span>
+          <div class="link-icon">
+            <svg
+              class="icon"
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#3498db"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            >
+              <path
+                d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+              />
+            </svg>
+            <svg
+              class="icon"
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#008000"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+            >
+              <path
+                d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+              />
+            </svg>
+          </div>
+        </a>
+      </div>
+      <div class="rightPage">
+        <div class="AMContent">
+          <img
+            src="http://blog-billetterie.fr/wp-content/uploads/2016/07/5-choses-%C3%A0-savoir-sur-la-billetterie-num%C3%A9rique.png"
+            alt=""
+          />
+          <p class="title" data-aos-duration="3000" data-aos="zoom-in">
+            Billeterie
+          </p>
+        </div>
+        <p class="subtitle" data-aos-duration="3000" data-aos="zoom-in-up">
+          Nouveautés !
+        </p>
+        <p class="subSubtitle" data-aos-duration="3000" data-aos="zoom-in-down">
+          Retrouver tout vos billets moins chères pour vos concert ici.
+          <strong style="color: #ca2e28">-50%</strong> avec le code promo
+          rayane12baizbiz
+        </p>
+        <div class="linkContainer3">
+          <a
+            href="https://www.ticketmaster.fr/fr/concert"
+            class="link"
+            data-aos-duration="1500"
+            data-aos="fade-right"
+          >
+            <span class="mask">
+              <div class="link-container">
+                <span class="link-title1 titleLink">ACHETER UN BILLET</span>
+                <span class="link-title2 titleLink">ACHETER UN BILLET</span>
+              </div>
+            </span>
+            <div class="link-icon">
+              <svg
+                class="icon"
+                width="24"
+                height="24"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#3498db"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              >
+                <path
+                  d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+                />
+              </svg>
+              <svg
+                class="icon"
+                width="24"
+                height="24"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#3498db"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              >
+                <path
+                  d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+                />
+              </svg>
+            </div>
+          </a>
+          <a
+            href="/concert"
+            class="link"
+            data-aos-duration="1500"
+            data-aos="fade-left"
+          >
+            <span class="mask">
+              <div class="link-container">
+                <span class="link-title1 titleLink">VOIR LES CONCERTS</span>
+                <span class="link-title2 titleLink">VOIR LES CONCERTS</span>
+              </div>
+            </span>
+            <div class="link-icon">
+              <svg
+                class="icon"
+                width="24"
+                height="24"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#3498db"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              >
+                <path
+                  d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+                />
+              </svg>
+              <svg
+                class="icon"
+                width="24"
+                height="24"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#3498db"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              >
+                <path
+                  d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+                />
+              </svg>
+            </div>
+          </a>
+        </div>
+
+        <div class="BilletImg">
+          <img
+            src="https://www.imprimerie-reliefdoc.com/wp-content/uploads/2016/09/billeterie-RELIEFDOC.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

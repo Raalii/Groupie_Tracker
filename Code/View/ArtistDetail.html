@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/ArtistDetail.css" />
+    <link rel="stylesheet" href="/static/link.css">
+    <link rel="stylesheet" href="/static/scroll.css">
+    <script src="/static/js/main.js"></script> 
+    <link
+      href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/ico" href="./favicon.ico"/>
+    <script type="text/javascript" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>{{.Name}}</title>
+  </head>
+  <body>
+    <script>
+      AOS.init();
+    </script>
+    <div class="InfoDate" style="display: none">
+      {{range $key, $value := .DatesLocations}}
+      <p class="Locations">{{$key}}</p>
+      {{range $value}}
+      <p class="Dates"></p>
+      {{end}} 
+      {{end}}
+    </div>
+    <div id="bg"></div>
+    <div id="container">
+      <div class="ArtistContent">
+        <button class="button flip" onclick="Back()">
+          <div class="arrow"></div>
+        </button>
+        <div class="ArtistDescrip">
+          <img
+            src="{{.Image}}"
+            width="auto"
+            height="200px"
+            alt=""
+            data-aos-duration="3000"
+            data-aos="fade-right"
+          />
+        </div>
+        <div class="ArtistPreView">
+          <p class="title" data-aos-duration="3000" data-aos="fade-down">
+            {{.Name}}
+          </p>
+          <p class="subtitle" data-aos="zoom-in" data-aos-duration="3000">
+            Fiche technique
+          </p>
+
+          <div
+            class="DescriptionContent"
+            data-aos="zoom-in-up"
+            data-aos-duration="3000"
+          >
+            <div class="DescriptionParams">
+              <p class="DescripitionTitle">Membres</p>
+              {{range .Members}}
+              <p class="TextDescription">{{.}}</p>
+              {{end}}
+            </div>
+            <div class="DescriptionParams">
+              <p class="DescripitionTitle">
+                Date du 1 <sup style="margin-right: 0.5vw">er </sup> album
+              </p>
+
+              <p class="TextDescription">{{.FirstAlbum}}</p>
+            </div>
+            <div class="DescriptionParams">
+              <p class="DescripitionTitle">A commencé la musique en</p>
+              <p class="TextDescription">{{.CreationDate}}</p>
+            </div>
+            <div class="DescriptionParams">
+              <p class="DescripitionTitle">Nationnalité</p>
+              <p class="TextDescription">{{.Country}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ConcertContent">
+        <div class="ConcertDetail">
+          <div class="Tab">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Lieu</th>
+                  <th>Prix</th>
+                </tr>
+              </thead>
+              <tbody>
+                {{range $key, $value := .DatesLocations}} 
+                {{range $value}}
+                <tr>
+                  <td style="text-transform: capitalize;">{{$key}}</td>
+                  <td>{{.}}</td>
+                  <td>        <a href="/billeterie" class="link" data-aos-duration="1500" data-aos="fade-right">
+                    <span class="mask">
+                      <div class="link-container">
+                        <span class="link-title1 titleLink" style="font-size: 1em; color:aliceblue">VOIR PRIX</span>
+                        <span class="link-title2 titleLink" style="font-size: 1em; color:aliceblue"> VOIR PRIX</span>
+                      </div>
+                    </span>
+                    <div class="link-icon">
+                      <svg
+                        class="icon"
+                        width="24"
+                        height="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="white"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                      >
+                        <path
+                          d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+                        />
+                      </svg>
+                      <svg
+                        class="icon"
+                        width="24"
+                        height="24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="white"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                      >
+                        <path
+                          d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+                        />
+                      </svg>
+                    </div>
+                  </a></td>
+                </tr>
+                {{end}}
+                {{end}}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="MapView">
+          <div id="map" style="width: 50vw; height: 95vh"></div>
+        </div>
+      </div>
+    </div>
+    <div id="MapData" style="display: none">
+        {{range $key, $value := .DatesLocations}}
+            <p class="ville">{{$key}}</p>
+      {{end}}
+    </div>
+
+    <script
+    async
+    defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCXZamvw0qG9aG6KYe_M-Haqpwfc-8mHw&callback=initMap"
+    type="text/javascript"
+  ></script>
+  </body>
+</html>
